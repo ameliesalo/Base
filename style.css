@@ -2,25 +2,53 @@
     box-sizing: border-box;
 }
 
-.whome{
-    width: fit-content;
-    height: fit-content;
-    margin-top: 5%;
-}
 body{
     background-image: url(./pics/wishinghome.jpg);
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "header header header header"
+    "hero hero hero hero"
+    "main main main aside"
+    "main main main aside"
+    "main main main aside"
+    "footer footer footer footer";
+}
+
+@media screen and (max-width: 800px){
+    body {
+        background-image: url(./pics/wishinghome.jpg);
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "header header header header"
+        "hero hero hero hero"
+        "main main main main"
+        "main main main main"
+        "aside aside aside aside"
+        "footer footer footer footer";
+    }
+}
+
+.whome{
+    width: 100vw;
+    height: 100vh;
 }
 
 header{
+    grid-area: header;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    height: 20vh;
-    width: 100vw;
     border-bottom: 1px dotted black;
     background-color: cornflowerblue;
 }
@@ -44,45 +72,43 @@ input{
     border-radius: 10%;
 }
 
-main{
+hero{
     background-color: azure;
-    width: 80vw;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 5%;
+    opacity: 0.8;
+    grid-area: hero;
 }
-
 .S-one{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
-    height: 40%;
-    margin-top: 5%;
+    text-align: center;
+    margin: 5%;
+    padding: 5%;
     border-bottom: 1px solid black;
 }
 .selfie{
-    height: 40%;
-    width: 30%;
+    height: 30%;
+    width: 20%;
     border-radius: 50%;
     border: 1px solid black;
 }
 
-
-article{
-    width: 60%;
-    height: 40%;
-    margin-top: 5%;  
+main{
+    grid-area: main;
+    background-color: azure;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    margin: 5%;
 }
 .A-one{
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    width: 60%;
+    height: 40%;
     border-bottom: 1px solid black;
 }
 .A-two{
@@ -91,17 +117,34 @@ article{
     margin-left: auto;
     align-items: center;
 }
+
+aside{
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    background-color: azure;
+    margin: 10%;
+    padding: 5%;
+}
+aside article{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
 .tjorven{
-    width: 35%;
-    height: 30%;
-    border-radius: 50%;
+    width: 85%;
+    height: 80%;
     border: 1px solid black;
 }
 
 footer{
+    grid-area: footer;
     border-top: 1px dotted black;
+    background-color: cornflowerblue;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
     padding: 5%;
 
@@ -112,4 +155,10 @@ footer p {
     padding: 2%;
     border-radius: 10%;
     border: 1px solid black;
+}
+.fb{
+    box-sizing: content-box;
+    width: 10vw;
+    height: 10vh;
+    padding: 0;
 }
