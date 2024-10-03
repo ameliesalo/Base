@@ -153,13 +153,13 @@ footer{
 .footer__contact {
     background-color: rgb(170, 80, 255);
     color: black;
-    padding: 2%;
+    padding: 2%; 
     border-radius: 10%;
     border: 1px solid black;
 }
 .footer--fb{
     box-sizing: content-box;
     width: 10vw;
-    height: 10vh;
+    height: auto;
     padding: 0;
 }
