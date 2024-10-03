@@ -8,26 +8,24 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="">ABOUT</a>
-            <a href="">CONTACT</a>
-            <a href="">PORTFOLIO</a>
+        <nav class="nav">
+            <a class="nav__page" href="">ABOUT</a>
+            <a class="nav__page" href="">CONTACT</a>
+            <a class="nav__page" href="">PORTFOLIO</a>
         </nav>
         <input type="text" placeholder="search">
     </header>
 
-    <hero>
-        <section class="S-one">
-        <img class="selfie" src="./pics/selfie.jpg" alt="selfie">
+    <section class="section__welcome">
+        <img class="section--selfie" src="./pics/selfie.jpg" alt="selfie">
         <h1>Amelies Portfolio</h1>
         <p>Hej! Välkommen till hemsidan om Mig!</p>
         <p> Mitt namn är Amelie Salomonsson, jag är 26år gammal, bor utanför malmköping och studerar javascriptutveckling.</p>
-        </section>
-    </hero>
+    </section>
     
     <main>
-        <article class="A-one">
-            <article class="A-two">
+        <article class="article">
+            <article class="article__experiences">
             <h2>Erfarenheter</h2>
             <p>Tidigare arbetslivserfarenhet är ett sommarjobb på en liten Ica butik i Eskilstuna. Där fick jag plocka varor samt sitta i kassan.</p>
                 
@@ -43,9 +41,9 @@
         </article>
     </main>
 
-    <aside>
-        <article>
-            <img class="tjorven" src="./pics/tjorvesen.jpg" alt="cat">
+    <aside class="aside">
+        <article class="aside article__person">
+            <img class="aside--tjorven" src="./pics/tjorvesen.jpg" alt="cat">
             <h4>Person fakta</h4>
             <ul>
                 <li>positiv</li>
@@ -58,10 +56,10 @@
         </article>    
     </aside>
 
-    <footer>
-        <a href="https://gmail.com"><b>Mejl:</b> amelie.salomonssons@gmail.com</a>
-        <a class="fb" href="https://www.facebook.com/amelie.salomonsson.5"><img class="fb" src="./pics/fb.jpeg" alt="facebook"></a>
-        <p><b>Telefon: </b>0767116144</p>
+    <footer class="footer">
+        <a class="footer__contact" href="https://gmail.com"><b>Mejl:</b> amelie.salomonssons@gmail.com</a>
+        <a class="footer--fb" href="https://www.facebook.com/amelie.salomonsson.5"><img class="footer--fb" src="./pics/fb.jpeg" alt="facebook"></a>
+        <p class="footer__contact"><b>Telefon: </b>0767116144</p>
     </footer>
 </body>
 </html>
